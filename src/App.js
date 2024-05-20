@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
+import Header from './components/header';
+import Footer from './components/footer';
+import Table from './components/table';
+import SearchInput from './components/searchInput';
+import Button from './components/Button';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="buttons">
+        <Button onClick={colorEvenRows} label="Color Pares" />
+        <Button onClick={colorOddRows} label="Color Impares" />
+        <Button onClick={() => filterRecords(1, 10)} label="Filtrar 1-10" />
+        <Button onClick={() => filterRecords(11, 20)} label="Filtrar 11-20" />
+      </div>
+      <SearchInput />
+      <div className="content-area">
+        <h2>Top Scorers</h2>
+        <div className="table-container">
+          <Table />
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }
