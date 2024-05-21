@@ -64,6 +64,6 @@ export function filterTable() {
             rows[i].style.display = '';
         } else {
             rows[i].style.display = 'none';
-        }
+        } 
     }
 }
