@@ -4,9 +4,9 @@ export function colorEvenRows() {
     var table = document.querySelector('.players-table');
     var rows = table.getElementsByTagName('tr');
 
-    for (var i = 1; i < rows.length; i++) {
+    for (var i = 1; i < rows.length; i++) { // Comenzar desde i = 1
         if (i % 2 === 0) {
-            rows[i].style.backgroundColor = '#f2f2f2';
+            rows[i].style.backgroundColor = '#a0ced9';
         } else {
             rows[i].style.backgroundColor = '';
         }
@@ -17,9 +17,9 @@ export function colorOddRows() {
     var table = document.querySelector('.players-table');
     var rows = table.getElementsByTagName('tr');
 
-    for (var i = 1; i < rows.length; i++) {
+    for (var i = 1; i < rows.length; i++) { // Comenzar desde i = 1
         if (i % 2 !== 0) {
-            rows[i].style.backgroundColor = '#f2f2f2';
+            rows[i].style.backgroundColor = '#d4afb9';
         } else {
             rows[i].style.backgroundColor = '';
         }
