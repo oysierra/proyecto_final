@@ -10,10 +10,10 @@ function Header() {
                 <div className="phone">123-456-7890</div>
             </div>
             <nav>
-                <a href="#">Buy Tickets</a>
-                <a href="#">Login</a>
-                <a href="#">Register</a>
-                <a href="#"><img src="/images/cart-icon.png" alt="Cart" /></a>
+                <a href="https://www.ticketmaster.com">Buy Tickets</a>
+                <a href="https://es.wikipedia.org/wiki/Login">Login</a>
+                <a href="https://es.wikipedia.org/wiki/Login">Register</a>
+                <a href="https://es.wikipedia.org/wiki/Login"><img src="/images/cart-icon.png" alt="Cart" /></a>
             </nav>
         </header>
     );
