@@ -1,28 +1,24 @@
 import React from 'react';
-import Header from './components/header';
-import Footer from './components/footer';
-import Table from './components/table';
-import SearchInput from './components/searchInput';
-import Button from './components/Button';
 import './App.css';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Table from './components/Table/Table';
+import SearchInput from './components/SearchInput/SearchInput';
+import Button from './components/Button/Button';
+import { colorEvenRows, colorOddRows, filterRecords, filterTable } from './utils';
 
 function App() {
   return (
     <div className="App">
       <Header />
       <div className="buttons">
-        <Button onClick={colorEvenRows} label="Color Pares" />
-        <Button onClick={colorOddRows} label="Color Impares" />
-        <Button onClick={() => filterRecords(1, 10)} label="Filtrar 1-10" />
-        <Button onClick={() => filterRecords(11, 20)} label="Filtrar 11-20" />
+        <Button onClick={colorEvenRows} text="Color Pares" />
+        <Button onClick={colorOddRows} text="Color Impares" />
+        <Button onClick={() => filterRecords(1, 10)} text="Filtrar 1-10" />
+        <Button onClick={() => filterRecords(11, 20)} text="Filtrar 11-20" />
       </div>
-      <SearchInput />
-      <div className="content-area">
-        <h2>Top Scorers</h2>
-        <div className="table-container">
-          <Table />
-        </div>
-      </div>
+      <SearchInput onKeyUp={filterTable} placeholder="Buscar..." />
+      <Table />
       <Footer />
     </div>
   );

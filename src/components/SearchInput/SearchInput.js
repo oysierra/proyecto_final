@@ -1,5 +1,5 @@
 import React from 'react';
-import { filterTable } from '../utils/filterUtils';
+import { filterTable } from '../../utils/filterUtils';
 
 function SearchInput() {
     return (
